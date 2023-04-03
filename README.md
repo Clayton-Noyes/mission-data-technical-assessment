@@ -32,10 +32,10 @@ There are 4 journals that are seeded into this database:
 4. Relatively Unknown
 
 Each of these journals have 10 entries each, which can be accessed with the following api endpoints:
-- `http://localhost:8080/journals/` - GET all the journals
-- `http://localhost:8080/journals/{journal_id}` - CRUD for a single journal
-- `http://localhost:8080/journals/{journal_id}/entries` - GET all entries for a single journal 
-- `http://localhost:8080/journals/{journal_id}/entries/{entry_id}` - CRUD for a single journal entry
+- `http://localhost:3000/journals/` - GET all the journals
+- `http://localhost:3000/journals/{journal_id}` - CRUD for a single journal
+- `http://localhost:3000/journals/{journal_id}/entries` - GET all entries for a single journal 
+- `http://localhost:3000/journals/{journal_id}/entries/{entry_id}` - CRUD for a single journal entry
 
 # The Database Structure
 
@@ -50,10 +50,16 @@ The journal table consists of the following columns:
 - description (string)
 - first_publishing_date (datetime)
 - publisher (string)
+- created_at (datetime)
+- updated_at (datetime)
 
 The entries table consists of the following columns:
 - id (bigint)
-- journal_id (bigint)
 - title (string)
-- abstract (string)
-- article (string)
+- content (text)
+- published_at (datetime)
+- is_published (boolean)
+- journal_id (bigint)
+- abstract (text)
+- created_at (datetime)
+- updated_at (datetime)
