@@ -41,7 +41,9 @@ Each of those journals have 10 seeded entries to get you started
 ## Regarding the api endpoints of this service and using Postman to interact with it
 I have included two JSON files: `postman-collection.json` and `postman-environment.json` that you can import into your Postman that will allow you to test the endpoints of the microservice. If you, like me, forget how to import Postman collections and environments into the Postman app here is a how-to video on how to do that:
 
-[Video Here]
+
+https://user-images.githubusercontent.com/20774670/229887913-30d25e6b-832d-4409-a811-c652f1962540.mov
+
 
 These are the api endpoints that you can use to interact with this microservice:
 - `http://localhost:3000/journals/` - Get all journals, POST (Create) a new journal
