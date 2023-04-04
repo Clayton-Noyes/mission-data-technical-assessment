@@ -3,7 +3,6 @@ class Entry < ApplicationRecord
 
   validates :title, presence: true
   validates :content, presence: true
-  validates :published_at, presence: true
   validate :published_at_cannot_be_in_the_future
 
   scope :published, -> { where(is_published: true) }
