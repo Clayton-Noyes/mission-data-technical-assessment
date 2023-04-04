@@ -1,0 +1,32 @@
+{
+	"name": "Mission-Data Technical Assessment Api Environment",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "text",
+			"enabled": true
+		},
+    {
+      "key": "journal_id",
+      "value": "1",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "journal_entry_id",
+      "value": "1",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "single_entry_id",
+      "value": "21",
+      "type": "text",
+      "enabled": true
+    }
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "{{timestamp}}",
+	"_postman_exported_using": "Postman/8.0.7"
+}
