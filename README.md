@@ -60,6 +60,10 @@ The entries table consists of the following columns:
 - published_at (datetime)
 - is_published (boolean)
 - journal_id (bigint)
-- abstract (text)
 - created_at (datetime)
 - updated_at (datetime)
+
+# 3rd party libraries chosen to aid the project:
+## Rspec and Shoulda-matchers
+I decided on using rspec instead of the default rails testing framework since I am most familiar with Rspec. But I decided to try my hand at using the shoulda-matchers gem alongside Rspec to aid in the readability of the spec tests for the journal and entry models. I found it to be very powerful and really helped the readability of the spec tests.
+
