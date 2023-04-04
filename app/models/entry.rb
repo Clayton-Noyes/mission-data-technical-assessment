@@ -7,7 +7,7 @@ class Entry < ApplicationRecord
 
   scope :published, -> { where(is_published: true) }
 
-  def published!
+  def publish!
     self.is_published = true
     self.save
   end
