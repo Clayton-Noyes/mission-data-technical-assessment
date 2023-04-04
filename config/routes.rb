@@ -3,5 +3,9 @@ Rails.application.routes.draw do
     resources :entries
   end
 
-  resources :entries
+  resources :entries do
+    member do
+      post :publish
+    end
+  end
 end
