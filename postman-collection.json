@@ -207,7 +207,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{journal_entry_id}}",
               "host": [
                 "{{base_url}}"
               ],
@@ -215,7 +215,7 @@
                 "journals",
                 "{{journal_id}}",
                 "entries",
-                "{{single_entry_id}}"
+                "{{journal_entry_id}}"
               ]
             },
             "description": "",
@@ -231,7 +231,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{journal_entry_id}}",
               "host": [
                 "{{base_url}}"
               ],
@@ -239,7 +239,7 @@
                 "journals",
                 "{{journal_id}}",
                 "entries",
-                "{{single_entry_id}}"
+                "{{journal_entry_id}}"
               ]
             },
             "description": ""
@@ -251,7 +251,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}/publish",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{journal_entry_id}}/publish",
               "host": [
                 "{{base_url}}"
               ],
@@ -259,7 +259,7 @@
                 "journals",
                 "{{journal_id}}",
                 "entries",
-                "{{single_entry_id}}",
+                "{{journal_entry_id}}",
                 "publish"
               ]
             },
