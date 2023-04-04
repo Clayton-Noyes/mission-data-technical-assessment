@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       member do
         post :publish
         get :newest
+        get :published
       end
       collection do
         get :newest
