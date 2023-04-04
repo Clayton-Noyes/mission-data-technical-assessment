@@ -1,6 +1,11 @@
 # Welcome!
 
-Hello Mission Data, I would like to present to you my application for managing a journal and their entries. This small rails application is very easy to set up and get running. Let's jump into it.
+Hello Mission Data, I would like to present to you my application for managing journals and their entries.
+
+## About
+
+I decided to take the approach that these journals and entries are more like established journals, that way the data could be a little more interesting. Each journal concerns a different aspect that I find interesting: Star Wars, Hot Rods, Technology, and History. Then each entry is a pseudo "article". For example the History journal has an entry about the Lipizzaner stallions of WWII.
+
 
 ## Install Dependencies
 
