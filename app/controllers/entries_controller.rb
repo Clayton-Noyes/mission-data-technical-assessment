@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :update, :destroy]
+  before_action :set_newest_entry, only: [:newest]
 
   def index
     @entries = Entry.all
@@ -13,7 +14,7 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entries_params)
     if @entry.save
-      render json: @entry, status: :created, location: @entry
+      render json: @entry, status: :created
     else
       render json: @entry.errors, status: :unprocessable_entity
     end
@@ -39,10 +40,18 @@ class EntriesController < ApplicationController
     redirect_to entry_path(@entry)
   end
 
+  def newest
+    render json: @entry
+  end
+
   private
 
   def set_entry
-    @entry = Entry.find(params[:id])
+    @entry = Journal.find(params[:journal_id]).entries.find(params[:id])
+  end
+
+  def set_newest_entry
+    @entry = Journal.find(params[:journal_id]).most_recent_entry
   end
 
   def entries_params
