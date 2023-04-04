@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :update, :destroy]
+  before_action :set_published_entries, only: [:published]
   before_action :set_newest_entry, only: [:newest]
 
   def index
@@ -33,11 +34,15 @@ class EntriesController < ApplicationController
   end
 
   # Other actions
+  def published
+    render json: @entries
+  end
+
   def publish
     @entry = Entry.find(params[:id])
     @entry.publish!
 
-    redirect_to entry_path(@entry)
+    render json: @entry
   end
 
   def newest
@@ -48,6 +53,10 @@ class EntriesController < ApplicationController
 
   def set_entry
     @entry = Journal.find(params[:journal_id]).entries.find(params[:id])
+  end
+
+  def set_published_entries
+    @entries = Journal.find(params[:journal_id]).entries.published
   end
 
   def set_newest_entry
