@@ -41,13 +41,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/journals/{{:journal_id}}",
+              "raw": "{{base_url}}/journals/{{journal_id}}",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "journals",
-                ":id"
+                "{{journal_id}}"
               ]
             },
             "description": ""
@@ -75,7 +75,7 @@
             "description": "",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"\"\n}"
+              "raw": "{\n  \"title\": \"A New Journal\"\n}"
             }
           }
         },
@@ -90,19 +90,19 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/journals/{{:journal_id}}",
+              "raw": "{{base_url}}/journals/{{journal_id}}",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "journals",
-                ":id"
+                "{{single_entry_id}}"
               ]
             },
             "description": "",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"\"\n}"
+              "raw": "{\n  \"title\": \"This is an Updated Journal Title\"\n}"
             }
           }
         },
@@ -112,13 +112,13 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/journals/{{:journal_id}}",
+              "raw": "{{base_url}}/journals/{{journal_id}}",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "journals",
-                ":id"
+                "{{single_entry_id}}"
               ]
             },
             "description": ""
@@ -135,11 +135,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/entries",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries"
               ]
             },
@@ -152,11 +154,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/entries/newest",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/newest",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries",
                 "newest"
               ]
@@ -175,18 +179,20 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/entries",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries"
               ]
             },
             "description": "",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"\",\n  \"body\": \"\",\n  \"journal_id\": \"\"\n}"
+              "raw": "{\n  \"title\": \"New Sea Slug Species Encountered in the Kuat System\",\n  \"content\": \"A New Slug Species has been catalogued by the New Republic Science of Non-Conforming Species Division. It appears to be similar to the species that the Millenium Falcon flew into while escaping the Empire, but can release plasma from its mouth at random intervals. Flyers beware!\",\n  \"journal_id\": \"1\"\n}"
             }
           }
         },
@@ -201,19 +207,21 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/entries/:id",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries",
-                ":id"
+                "{{single_entry_id}}"
               ]
             },
             "description": "",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"\",\n  \"body\": \"\",\n  \"journal_id\": \"\"\n}"
+              "raw": "{\n  \"title\": \"Ferocious Plasma Breathing Space Slug Discovered in the Outer Rim!\"\n}"
             }
           }
         },
@@ -223,13 +231,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/entries/:id",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries",
-                ":id"
+                "{{single_entry_id}}"
               ]
             },
             "description": ""
@@ -241,13 +251,15 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/entries/:id/publish",
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{single_entry_id}}/publish",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
+                "journals",
+                "{{journal_id}}",
                 "entries",
-                ":id",
+                "{{single_entry_id}}",
                 "publish"
               ]
             },
