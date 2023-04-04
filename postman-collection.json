@@ -265,6 +265,26 @@
             },
             "description": ""
           }
+        },
+        {
+          "name": "Get the published entries for a journal",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/journals/{{journal_id}}/entries/{{journal_entry_id}}/published",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "journals",
+                "{{journal_id}}",
+                "entries",
+                "{{journal_entry_id}}",
+                "published"
+              ]
+            }
+          }
         }
       ]
     }
