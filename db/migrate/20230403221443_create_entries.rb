@@ -6,7 +6,6 @@ class CreateEntries < ActiveRecord::Migration[7.0]
       t.text :content
       t.datetime :published_at
       t.boolean :is_published
-      t.text :abstract
 
       t.timestamps
     end
